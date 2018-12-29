@@ -3,5 +3,7 @@
   user: ricky
   sudo: yes
   tasks:
-  - name: install httpd package 
-    yum: name=httpd state=insalled
+  - name: restart httpd service 
+    service: name=httpd state=started
+  - name: update httpd service
+    yum: name=httpd state=updated
