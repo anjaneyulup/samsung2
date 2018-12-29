@@ -1,0 +1,7 @@
+--- # webserver setup
+- hosts: server2.abc.com
+  user: ricky
+  sudo: yes
+  tasks:
+  - name: install httpd package 
+    yum: name=httpd state=insalled
