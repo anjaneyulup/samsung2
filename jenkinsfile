@@ -1,15 +1,24 @@
-pipeline {
-	agent any 
-	stages {
-stage(‘Build’) {
-	steps {
-		//…
-	}
-	}
-	stage (‘Test’) {
-	steps {
-		//…
-	}
-	}
-}
-}
+jenkinsfile {
+   agent any {
+   }
+   stages {
+     stage ('Build')
+       steps {
+          sh 'mvn clean install'
+         }
+        }
+       }
+    post {
+     always {
+      deleteDir()
+     }
+    failure {
+     mail to :'anjaneyulupolagoni@gmail.com', subject: 'FALURE'
+   }
+  }
+ }
+
+
+
+
+  
