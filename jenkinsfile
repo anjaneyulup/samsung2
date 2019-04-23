@@ -13,7 +13,7 @@ jenkinsfile {
       deleteDir()
      }
     failure {
-     mail to :'goudpolagoni0003@gmail.com', subject: 'FALURE'
+     mail to :'anjaneyulupolagoni@gmail.com', subject: 'FALURE'
    }
   }
  }
